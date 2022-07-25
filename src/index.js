@@ -6,14 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import TodoList from './components/todo';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-//import store from './store/configureStore';
+import store from './store/configureStore';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const store1 = createStore(rootReducer)
 root.render(
-  <Provider store={store1}>
+  <Provider store={store}>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />

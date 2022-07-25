@@ -3,7 +3,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import rootReducer from "./rootReducer";
 
 export default function store (){
-    createStore(rootReducer)
+    createStore(rootReducer, composeWithDevTools())
 }
     
     
