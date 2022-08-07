@@ -7,15 +7,19 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import TodoList from './components/todo';
 import { Provider } from 'react-redux';
 import store from './store/configureStore';
+import { Click } from './components/class/Click';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const storeValue = store()
+
 root.render(
-  <Provider store={store}>
+  <Provider store={storeValue}>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='todo' element={<TodoList />} />
+        <Route path='click' element={<Click />} />
       </Routes>
     </BrowserRouter>
   </Provider>
